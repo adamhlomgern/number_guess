@@ -53,3 +53,7 @@ def replay():
         start_game()
     else:
         print("Thank you for playing!")
+
+# Main execution
+if __name__ == "__main__":
+    start_game()
