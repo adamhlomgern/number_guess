@@ -34,7 +34,6 @@ def guess_loop():
     global number_of_guesses
     while number_of_guesses > 0:
         player_guess = int(input("Enter your guess(1-100): "))
-        print(f"Your guess is: {player_guess}")
         if player_guess > target_number:
             print("Too high.")
         elif player_guess < target_number:
@@ -45,7 +44,7 @@ def guess_loop():
             return
         number_of_guesses -= 1
         print(f"You have {number_of_guesses} guesses left.")
-        replay()
+        guess_loop()
 
 def replay():
     play_again = input("Do you want to play again? Type 'yes' or 'no': ").lower()
@@ -53,6 +52,7 @@ def replay():
         start_game()
     else:
         print("Thank you for playing!")
+        exit()
 
 # Main execution
 if __name__ == "__main__":
