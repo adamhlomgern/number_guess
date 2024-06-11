@@ -19,7 +19,6 @@ def start_game():
     difficulty()
     guess_loop()
 
-
 def difficulty():
     global number_of_guesses
     difficulty_choice = input("Choose a difficulty. Type 'easy' or 'hard': ").lower()
@@ -30,7 +29,6 @@ def difficulty():
     else:
         print("Please return a valid answer.")
         difficulty()
-
 
 def guess_loop():
     global number_of_guesses
@@ -48,7 +46,6 @@ def guess_loop():
         number_of_guesses -= 1
         print(f"You have {number_of_guesses} guesses left.")
         replay()
-
 
 def replay():
     play_again = input("Do you want to play again? Type 'yes' or 'no': ").lower()
